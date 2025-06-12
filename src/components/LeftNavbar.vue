@@ -4,7 +4,7 @@
             @drop.prevent="handleDrop">
             <label for="">
                 <input type="file" accept="image/*" class="hidden" @change="onFileChange" ref="fileInput" />
-                <div class="w-36 h-36 mx-auto rounded-full flex items-center justify-center overflow-hidden cursor-pointer transition"
+                <div class="w-36 h-36 mx-auto rounded-full border flex items-center justify-center overflow-hidden cursor-pointer transition"
                     :class="dragActive ? 'right-4 ring-green-400' : ''" @click="triggerFileInput">
                     <img v-if="imageUrl" :src="imageUrl" class="object-cover w-full h-full" alt="profile" />
                     <span v-else class="text-gray-400">เลือกรูปภาพ</span>
