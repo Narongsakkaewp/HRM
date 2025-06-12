@@ -10,7 +10,7 @@
                 <img :src="imageUrl" alt="profile" class="object-cover w-full h-full" />
             </div>
             <div class="mt-3">
-                <p class="font-bold text-gray-700">ID : 67010003</p>
+                <p class="font-bold text-gray-700">รหัสพนักงาน : 67010003</p> 
                 <p><i class="fa-solid fa-gear text-gray-400"></i></p>
             </div>
         </div>
