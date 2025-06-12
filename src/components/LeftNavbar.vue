@@ -6,21 +6,24 @@
     ]">
         <!-- Profile -->
         <div class="text-center">
-            <div class="w-36 h-36 mx-auto rounded-full mt-6 overflow-hidden border-4 border-gray-200">
+            <div class="w-52 h-52 mx-auto rounded-full mt-6 overflow-hidden border-4 border-gray-200">
                 <img :src="imageUrl" alt="profile" class="object-cover w-full h-full" />
             </div>
-            <div class="mt-3">
-                <p class="font-bold text-gray-700">รหัสพนักงาน : 67010003</p> 
-                <p><i class="fa-solid fa-gear text-gray-400"></i></p>
+            <div class="mt-3 flex items-center justify-between">
+                <p class="font-bold text-gray-700">รหัสพนักงาน : 67010003</p>
+                <button>
+                    <p><i class="fa-solid fa-gear text-gray-400"></i></p>
+                </button>
+
             </div>
         </div>
 
         <!-- Navigation -->
         <nav class="mt-6 space-y-2">
-            <a href="#"
-                class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
+            <router-link to="/MainContent"
+                class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition cursor-pointer">
                 <i class="fa-solid fa-gauge mr-3 text-green-600"></i> Dashboard
-            </a>
+            </router-link>
             <a href="#"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-list mr-3 text-green-600"></i> ข้อมูลการเข้างาน
@@ -35,7 +38,7 @@
             </a>
             <a href="#"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
-                 <i class="fa-solid fa-people-group mr-2 text-green-600"></i> บุคลากร
+                <i class="fa-solid fa-people-group mr-2 text-green-600"></i> บุคลากร
             </a>
             <a href="#"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
