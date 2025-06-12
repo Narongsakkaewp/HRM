@@ -37,9 +37,9 @@
     </div>
 
     <!-- Section: Permissions -->
-    <h2 class="text-xl md:text-2xl font-bold font-Prompt mb-4 border-b pb-2 text-gray-800">
+    <!-- <h2 class="text-xl md:text-2xl font-bold font-Prompt mb-4 border-b pb-2 text-gray-800">
       <i class="fa-solid fa-key mr-2 text-green-600"></i> สิทธิการเข้าใช้ระบบ
-    </h2>
+    </h2> -->
     <!-- ส่วนนี้สามารถเพิ่มรายการสิทธิ์เข้าใช้งานต่อได้ -->
   </section>
 </template>
