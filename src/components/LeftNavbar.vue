@@ -1,3 +1,4 @@
+<!-- LeftNavBar.vue -->
 <template>
     <aside :class="[
         'bg-white shadow-xl z-40 p-4 fixed md:static top-0 left-0 h-full transition-transform duration-300 ease-in-out',
@@ -20,46 +21,56 @@
 
         <!-- Navigation -->
         <nav class="mt-6 space-y-2">
-            <router-link to="/MainContent"
+            <router-link to="/"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition cursor-pointer">
                 <i class="fa-solid fa-gauge mr-3 text-green-600"></i> Dashboard
             </router-link>
+
             <router-link to="/WorkTime"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-list mr-3 text-green-600"></i> ข้อมูลการเข้างาน
             </router-link>
-            <a href="#"
+
+            <router-link to="/News"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-globe mr-3 text-green-600"></i> ข้อมูลข่าวสาร
-            </a>
-            <a href="#"
+            </router-link>
+
+            <router-link to="/Training"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-book-open-reader mr-3 text-green-600"></i> การอบรม
-            </a>
-            <a href="#"
+            </router-link>
+
+            <router-link to="/Personnel"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-people-group mr-2 text-green-600"></i> บุคลากร
-            </a>
-            <a href="#"
+            </router-link>
+
+            <router-link to="/Salary"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-money-bills mr-3 text-green-600"></i> รายได้
-            </a>
-            <a href="#"
+            </router-link>
+
+            <router-link to="/Leave"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-clock mr-3 text-green-600"></i> การลางาน
-            </a>
-            <a href="#"
+            </router-link>
+            <router-link to="/Evaluation"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-chart-line mr-3 text-green-600"></i> การประเมิน
-            </a>
-            <a href="#"
+            </router-link>
+            <router-link to="/Download"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-file-arrow-down mr-3 text-green-600"></i> ดาวน์โหลดเอกสาร
-            </a>
-            <a href="#"
+            </router-link>
+            <router-link to="/Permission"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-table mr-3 text-green-600"></i> ข้อมูลสิทธิการใช้งานระบบ
-            </a>
+            </router-link>
+            <router-link to="/Setting"
+                class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
+                <i class="fa-solid fa-gear mr-3 text-green-600"></i> การตั้งค่า
+            </router-link>
         </nav>
 
         <!-- Mobile toggle -->
@@ -67,21 +78,21 @@
             <i class="fa-solid fa-xmark text-2xl"></i>
         </button>
     </aside>
-
-    <!-- Hamburger for Mobile -->
-    <button class="fixed top-4 left-4 z-50 bg-green-600 text-white p-2 rounded-full shadow md:hidden"
-        @click="toggleSidebar">
-        <i class="fa-solid fa-bars text-xl"></i>
-    </button>
 </template>
 
 <script>
 export default {
     name: "LeftNavbar",
+    // props: {
+    //     isOpen: {
+    //         type: Boolean,
+    //         required: true
+    //     }
+    // },
     data() {
         return {
             isOpen: true, // ให้เปิด sidebar ทันที
-            imageUrl: 'https://via.placeholder.com/150' // รูปโปรไฟล์พื้นฐาน
+            imageUrl: 'https://www.w3schools.com/howto/img_avatar.png' // URL ของรูปโปรไฟล์
         };
     },
     methods: {
@@ -91,7 +102,7 @@ export default {
     },
     components: {
         NavItem: {
-            props: ['icon', 'text'],
+            props: ['icon', 'text', 'isOpen'],
             template: `
         <a href="#" class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
           <i :class="'fa-solid ' + icon + ' mr-3 text-green-600'"></i>
@@ -103,13 +114,24 @@ export default {
 };
 </script>
 
-<style scoped>
-aside::-webkit-scrollbar {
-    width: 6px;
-}
-
-aside::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-}
-</style>
+<!-- <script>
+export default {
+    name: "LeftNavbar",
+    props: {
+        isOpen: {
+            type: Boolean,
+            required: true
+        }
+    },
+    data() {
+        return {
+            imageUrl: 'https://www.w3schools.com/howto/img_avatar.png'
+        };
+    },
+    methods: {
+        toggleSidebar() {
+            this.$emit("toggle-sidebar");
+        }
+    }
+};
+</script> -->

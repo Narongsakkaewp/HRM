@@ -1,6 +1,11 @@
+<!-- Header.vue -->
 <template>
   <header class="bg-gray-700 text-white p-2 flex justify-between items-center">
-    <div>
+    <div class="flex items-center gap-2">
+      <!-- Hamburger Button -->
+      <button class="md:hidden p-2 bg-green-600 rounded-full" @click="$emit('toggle-sidebar')">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
       <h1 class="text-lg font-bold">VBEYOND</h1>
     </div>
     <div>
@@ -8,6 +13,5 @@
         <i class="fa-solid fa-right-from-bracket"></i>
       </button>
     </div>
-
   </header>
 </template>
