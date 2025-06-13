@@ -20,7 +20,8 @@ export default {
   components: {
     Header,
     LeftNavbar,
-    MainContent
+    MainContent,
+    LoginData
   }
 }
 </script>

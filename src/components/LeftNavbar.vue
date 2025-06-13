@@ -24,10 +24,10 @@
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition cursor-pointer">
                 <i class="fa-solid fa-gauge mr-3 text-green-600"></i> Dashboard
             </router-link>
-            <a href="#"
+            <router-link to="/WorkTime"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-list mr-3 text-green-600"></i> ข้อมูลการเข้างาน
-            </a>
+            </router-link>
             <a href="#"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-globe mr-3 text-green-600"></i> ข้อมูลข่าวสาร
