@@ -84,13 +84,18 @@ export default {
     data() {
         return {
             workRecords: [
-                { date: "02 มิ.ย. 2025", checkIn: "09:15", checkOut: "17:05", status: "สาย" },
+                { date: "02 มิ.ย. 2025", checkIn: "09:35", checkOut: "17:05", status: "สาย" },
                 { date: "03 มิ.ย. 2025", checkIn: "-", checkOut: "-", status: "ขาดงาน" },
                 { date: "04 มิ.ย. 2025", checkIn: "08:59", checkOut: "17:00", status: "ปกติ" },
                 { date: "05 มิ.ย. 2025", checkIn: "08:50", checkOut: "17:10", status: "ปกติ" },
                 { date: "06 มิ.ย. 2025", checkIn: "08:30", checkOut: "17:05", status: "ปกติ" },
-                { date: "09 มิ.ย. 2025", checkIn: "-", checkOut: "-", status: "ลางาน" },
-                { date: "10 มิ.ย. 2025", checkIn: "08:30", checkOut: "17:05", status: "ปกติ" },
+                { date: "09 มิ.ย. 2025", checkIn: "08:55", checkOut: "-", status: "ปกติ" },
+                { date: "10 มิ.ย. 2025", checkIn: "08:30", checkOut: "18:05", status: "ปกติ" },
+                { date: "11 มิ.ย. 2025", checkIn: "08:30", checkOut: "17:00", status: "ปกติ" },
+                { date: "12 มิ.ย. 2025", checkIn: "08:30", checkOut: "17:07", status: "ปกติ" },
+                { date: "13 มิ.ย. 2025", checkIn: "08:30", checkOut: "17:01", status: "ปกติ" },
+                { date: "16 มิ.ย. 2025", checkIn: "-", checkOut: "-", status: "ลางาน" },
+                { date: "17 มิ.ย. 2025", checkIn: "09:11", checkOut: "16:20", status: "สาย" },
             ]
         };
     }

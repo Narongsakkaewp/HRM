@@ -3,10 +3,9 @@
     <aside :class="[
         'bg-white shadow-xl z-40 p-4 fixed md:static top-0 left-0 h-full transition-transform duration-300 ease-in-out',
         isOpen ? 'translate-x-0' : '-translate-x-full',
-        'w-64'
-    ]">
+        'w-64', 'flex flex-col h-screen overflow-hidden']">
         <!-- Profile -->
-        <div class="text-center">
+        <div class="text-center shrink-0">
             <div class="w-52 h-52 mx-auto rounded-full mt-6 overflow-hidden border-4 border-gray-200">
                 <img :src="imageUrl" alt="profile" class="object-cover w-full h-full" />
             </div>
@@ -20,7 +19,7 @@
         </div>
 
         <!-- Navigation -->
-        <nav class="mt-6 space-y-2">
+        <nav class="mt-6 space-y-2 flex-1 overflow-y-auto p-4">
             <router-link to="/"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition cursor-pointer">
                 <i class="fa-solid fa-gauge mr-3 text-green-600"></i> Dashboard
@@ -59,7 +58,7 @@
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-chart-line mr-3 text-green-600"></i> การประเมิน
             </router-link>
-            <router-link to="/Download"
+            <router-link to="/DownloadDocs"
                 class="flex items-center p-2 rounded-lg hover:bg-gray-100 text-gray-700 font-semibold transition">
                 <i class="fa-solid fa-file-arrow-down mr-3 text-green-600"></i> ดาวน์โหลดเอกสาร
             </router-link>
@@ -83,12 +82,6 @@
 <script>
 export default {
     name: "LeftNavbar",
-    // props: {
-    //     isOpen: {
-    //         type: Boolean,
-    //         required: true
-    //     }
-    // },
     data() {
         return {
             isOpen: true, // ให้เปิด sidebar ทันที
